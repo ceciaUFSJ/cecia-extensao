@@ -365,8 +365,14 @@ async function carregarExtensao() {
     box.className = "folder";
 
     const h = document.createElement("div");
-    h.className = "folder-header";
-    h.textContent = "📁 " + pasta.name;
+h.className = "folder-header";
+h.textContent = "📁 " + pasta.name;
+
+/* >>> FALTA ISTO <<< */
+h.addEventListener("click", () => {
+  box.classList.toggle("open");
+});
+
 
     const c = document.createElement("div");
     c.className = "folder-content";
